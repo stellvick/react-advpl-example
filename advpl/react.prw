@@ -38,7 +38,7 @@ User function React()
 	conout(oWebChannel:nPort)
 	
     // IMPORTANTE: Aqui definimos a porta WebSocket que sera utilizada
-    globalLink := "localhost:3000/?port=" + cValToChar(oWebChannel:nPort)
+    globalLink := "localhost:8080/?port=" + cValToChar(oWebChannel:nPort)
        
     // Toda acao JavaScript enviada atraves do comando dialog.jsToAdvpl()
     // serah recebida/tratada por esta bloco de codigo

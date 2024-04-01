@@ -3,6 +3,7 @@ const path = require('path');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
 
 const config = {
+  mode: 'development',
   // Entry points to the project
   entry: {
     main: [
