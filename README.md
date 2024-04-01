@@ -1,32 +1,48 @@
-# [React-Advpl-Example](https://github.com/vitorebatista/react-advpl-example)
+# twebchannel-js
+Implementação simples de comunicação com o componente AdvPL TWebChannel.
 
-This is an example project that uses React and Advpl.
+## Instalação:
 
-## Installation
-
-After cloning the repository, install dependencies:
-```sh
-cd <project folder>
-npm install
+```shell
+npm install @totvs/twebchannel-js --save
 ```
 
-Now you can run your local server:
-```sh
-npm start
+## Uso:
+
+#### connect
+Inicia a conexão com o TWebChannel AdvPL 
+
+Parametros: 
+* callback: Function
+
+
+```js
+    twebchannel.connect(callback);
 ```
-Server is located at http://localhost:3000
 
-Note: To allow external viewing of the demo, change the following value in `webpack-dev-server.config.js`
+#### jsToAdvpl
+Executa uma chamada para a execução do bloco de código **bJsToAdvpl** do TWebChannel AdvPL.
 
+Parametros: 
+* key: string
+* value: string
+
+
+```js
+    twebchannel.jsToAdvpl("key", "value");
 ```
-host: 'localhost'  //Change to '0.0.0.0' for external facing server
+
+#### advplToJs
+Função que é executada ao receber uma chamada do metodo **advplToJs** do TWebChannel AdvPL.
+
+Tipo: Function
+
+Parâmetros: 
+* key: string
+* value: string
+
+```js
+    twebchannel.advplToJs = function(key, value) {
+        console.log(key, value);
+    }
 ```
-
-Now compile the Advpl file in your Protheus environment and run `U_REACT` 
-
-![SmartClient](http://i.imgur.com/HmBn1wK.png)
-
-You will see something like this:
-
-![The magic](http://i.imgur.com/rnF5sjc.png)
-

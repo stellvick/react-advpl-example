@@ -18,7 +18,10 @@
 	"lastPrograms": [
 		{
 			"label": "U_REACT"
+		},
+		{
+			"label": "U_nivercomp"
 		}
 	],
-	"lastProgramExecuted": "U_REACT"
+	"lastProgramExecuted": "U_nivercomp"
 }
